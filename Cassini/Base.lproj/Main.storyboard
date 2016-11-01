@@ -37,7 +37,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <state key="normal" title="Earth"/>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="showDetail" id="vWH-Vk-th6"/>
+                                            <segue destination="BYZ-38-t0r" kind="showDetail" identifier="Show Image" id="vWH-Vk-th6"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mGc-Zu-G8d">
@@ -51,7 +51,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <state key="normal" title="Saturn"/>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="showDetail" id="mhA-sm-5zM"/>
+                                            <segue destination="BYZ-38-t0r" kind="showDetail" identifier="Show Image" id="mhA-sm-5zM"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -119,6 +119,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="bIM-m3-f78"/>
+        <segue reference="vWH-Vk-th6"/>
     </inferredMetricsTieBreakers>
 </document>
