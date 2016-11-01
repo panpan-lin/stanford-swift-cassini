@@ -82,18 +82,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ME7-mf-Tvp"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="D0i-DU-FNj"/>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="D0i-DU-FNj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AQd-AX-w0i"/>
                             <constraint firstItem="ME7-mf-Tvp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Upn-Ug-pg7"/>
                             <constraint firstAttribute="trailing" secondItem="ME7-mf-Tvp" secondAttribute="trailing" id="b8p-pp-dsr"/>
                             <constraint firstItem="ME7-mf-Tvp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="j78-qH-QLC"/>
+                            <constraint firstItem="D0i-DU-FNj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="nFP-8D-kaf"/>
                             <constraint firstItem="ME7-mf-Tvp" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="vtL-2i-lwS"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kYR-BT-l1p"/>
                     <connections>
                         <outlet property="scrollView" destination="ME7-mf-Tvp" id="vJM-C2-Zyg"/>
+                        <outlet property="spinner" destination="D0i-DU-FNj" id="AUi-4C-e0q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
