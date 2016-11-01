@@ -25,11 +25,13 @@ class CassiniViewController: UIViewController, UISplitViewControllerDelegate {
     }
     
     @IBAction func showImage(_ sender: UIButton) {
+        // for iPad, no segue
         if let ivc = splitViewController?.viewControllers.last?.contentViewController as? ImageViewController {
             let imageName = sender.currentTitle
             ivc.imageURL = DemoURL.NASAImageNamed(imageName: imageName)
             ivc.title = imageName
         } else {
+            // for iPhone, segue needed
             performSegue(withIdentifier: StoryBoard.ShowImageSegue, sender: sender)
         }
     }
