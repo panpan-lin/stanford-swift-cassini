@@ -13,6 +13,7 @@
 		298010121DC8D5D9005112EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 298010101DC8D5D9005112EC /* LaunchScreen.storyboard */; };
 		2980101B1DC8D686005112EC /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2980101A1DC8D686005112EC /* ImageViewController.swift */; };
 		2980101D1DC8D881005112EC /* DemoURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2980101C1DC8D881005112EC /* DemoURL.swift */; };
+		298010211DC8ED85005112EC /* CassiniViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298010201DC8ED85005112EC /* CassiniViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		298010131DC8D5D9005112EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2980101A1DC8D686005112EC /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageViewController.swift; path = ../ImageViewController.swift; sourceTree = "<group>"; };
 		2980101C1DC8D881005112EC /* DemoURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoURL.swift; sourceTree = "<group>"; };
+		298010201DC8ED85005112EC /* CassiniViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CassiniViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				298010191DC8D5FE005112EC /* Supporting Files */,
 				2980100B1DC8D5D9005112EC /* Main.storyboard */,
+				298010201DC8ED85005112EC /* CassiniViewController.swift */,
 				2980101A1DC8D686005112EC /* ImageViewController.swift */,
 				2980101C1DC8D881005112EC /* DemoURL.swift */,
 				298010131DC8D5D9005112EC /* Info.plist */,
@@ -150,6 +153,7 @@
 				2980101B1DC8D686005112EC /* ImageViewController.swift in Sources */,
 				298010081DC8D5D9005112EC /* AppDelegate.swift in Sources */,
 				2980101D1DC8D881005112EC /* DemoURL.swift in Sources */,
+				298010211DC8ED85005112EC /* CassiniViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +315,7 @@
 				298010181DC8D5D9005112EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
