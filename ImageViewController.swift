@@ -13,14 +13,27 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
     var imageURL: NSURL? {
         didSet {
             image = nil
-            fetchImage()
+            // unless I am on screen, I don't want to fetch images
+            if view.window != nil {
+                fetchImage()
+            }
         }
     }
     
     private func fetchImage() {
         if let url = imageURL {
-            if let imageData = NSData(contentsOf: url as URL) {
-                image = UIImage(data: imageData as Data)
+            DispatchQueue.global(qos: .userInitiated).async {
+                let contentsOfURL = NSData(contentsOf: url as URL)
+                
+                DispatchQueue.main.async {
+                    if url == self.imageURL {
+                        if let imageData = contentsOfURL {
+                            self.image = UIImage(data: imageData as Data)
+                        }
+                    } else {
+                        print("ignored data returned from url \(url)")
+                    }
+                }
             }
         }
     }
@@ -50,6 +63,13 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
             imageView.image = newValue
             imageView.sizeToFit()
             scrollView?.contentSize = imageView.frame.size // never forget setting the content size for the scroll view!
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if image == nil {
+            fetchImage()
         }
     }
     
