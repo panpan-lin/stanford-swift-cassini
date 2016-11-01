@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ImageViewController: UIViewController {
+class ImageViewController: UIViewController, UIScrollViewDelegate {
     
     var imageURL: NSURL? {
         didSet {
@@ -29,7 +29,14 @@ class ImageViewController: UIViewController {
         didSet {
             // if contentsize not set, scroll view will not scroll!
             scrollView.contentSize = imageView.frame.size
+            scrollView.delegate = self
+            scrollView.minimumZoomScale = 0.03
+            scrollView.maximumZoomScale = 1.0
         }
+    }
+    
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return imageView
     }
     
     private var imageView = UIImageView() // tiny size at this moment, 0 0 0
